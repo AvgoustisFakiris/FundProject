@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Sign Up</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+
+            <div class="form-group">
+                <label value="firstName" class="control-label">FirstName</label>
+                <input type="text" id="FirstName" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label value="LastName" class="control-label">LastName</label>
+                <input type="text" id="LastName" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label value="Email" class="control-label">Email</label>
+                <input type="text" id="Email" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label value="Password" class="control-label">Password</label>
+                <input type="text" id="Password" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label value="Password" class="control-label">Password</label>
+                <input type="text" id="Password" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <input type="button" id="Create" value="Create" class="btn btn-primary" onclick="saveUser()" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="About">Back to Main Page</a>
+</div>

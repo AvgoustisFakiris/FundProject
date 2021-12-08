@@ -1,6 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Login";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@model TestProject.Model.User
 
-<p>Login to Fund or Create a Project</p>
+@{ ViewData["Title"] = "Login"; }
+
+<!DOCTYPE html>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Login with your email and Password to Fund or Create a Project</a>.</p>
+</div>
+
+
+@using (@Html.BeginForm())
+{
+<table border="0">
+    <tr>
+        <td>@Html.LabelFor(model => model.Email)</td>
+        <td>@Html.EditorFor(model => model.Email)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Password)</td>
+        <td>@Html.EditorFor(model => model.Password)</td>
+    </tr>
+    <tr><td><input type="submit" value="Login" /></td></tr>
+</table>}

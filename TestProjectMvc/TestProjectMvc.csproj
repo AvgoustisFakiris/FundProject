@@ -10,7 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TestProjectApi\TestProjectApi.csproj" />
     <ProjectReference Include="..\TestProject\TestProject.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\NewFolder\" />
   </ItemGroup>
 
 </Project>

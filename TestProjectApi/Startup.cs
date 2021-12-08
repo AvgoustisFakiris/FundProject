@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestProject.Model;
+using TestProject.Service;
 
 namespace TestProjectApi
 {
@@ -26,8 +28,14 @@ namespace TestProjectApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            // Add framework services.
+            services.AddMvc();
             services.AddControllers();
+            services.AddHttpContextAccessor();
+            services.AddDbContext<CrmDbContext>();
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestProjectApi", Version = "v1" });
